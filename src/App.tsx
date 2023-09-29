@@ -1,11 +1,13 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import {HomeScreenContainer} from './screen';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+import MainNavigationScreen from 'navigation/MainNavigationScreen';
 
 const app = () => {
   return (
-    <>
-      <HomeScreenContainer />
-    </>
+    <SafeAreaProvider>
+      <MainNavigationScreen />
+    </SafeAreaProvider>
   );
 };
 

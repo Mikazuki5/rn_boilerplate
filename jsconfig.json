@@ -7,8 +7,9 @@
         "components/*": ["./src/components/*"],
         "constants/*": ["./src/constants/*"],
         "navigation/*": ["./src/navigation/*"],
-        "screens/*": ["./src/screens/*"],
+        "screen/*": ["./src/screen/*"],
         "utils/*": ["./src/utils/*"],
+        "types/*": ["./src/types/*"],
       }
     }
   }
