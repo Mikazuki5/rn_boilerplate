@@ -15,6 +15,7 @@ const plugins = [
         '@services': './src/services',
         '@utils': './src/utils',
         '@types': './src/types',
+        '@interface': './src/interface',
       },
     },
   ],

@@ -10,6 +10,7 @@
         "screen/*": ["./src/screen/*"],
         "utils/*": ["./src/utils/*"],
         "types/*": ["./src/types/*"],
+        "@interface/*": ["./src/interface/*"]
       }
     }
   }
