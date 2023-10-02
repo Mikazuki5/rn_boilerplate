@@ -3,7 +3,7 @@ import {
   NavigationContainer,
   createNavigationContainerRef,
 } from '@react-navigation/native';
-import {TMainNavigationScreen} from 'types/TNavigation';
+import { TMainNavigationScreen } from 'types/Navigation';
 import {
   HeaderStyleInterpolators,
   StackCardInterpolationProps,
@@ -11,7 +11,7 @@ import {
   TransitionSpecs,
   createStackNavigator,
 } from '@react-navigation/stack';
-import {HomeScreenContainer} from 'screen';
+import { HomeScreenContainer } from 'screen';
 
 const Stack = createStackNavigator<TMainNavigationScreen>();
 const navigationRef = createNavigationContainerRef<TMainNavigationScreen>();
@@ -23,7 +23,10 @@ const SlideTransition: StackNavigationOptions = {
     close: TransitionSpecs.TransitionIOSSpec,
   },
   headerStyleInterpolator: HeaderStyleInterpolators.forFade,
-  cardStyleInterpolator: ({current, layouts}: StackCardInterpolationProps) => {
+  cardStyleInterpolator: ({
+    current,
+    layouts,
+  }: StackCardInterpolationProps) => {
     return {
       cardStyle: {
         transform: [

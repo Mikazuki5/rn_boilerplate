@@ -1,10 +1,12 @@
+import { BottomNavigationComponent } from 'components';
 import React from 'react';
-import {View, Text} from 'react-native';
+import { View, Text } from 'react-native';
 
 const HomeScreenContainer = () => {
   return (
-    <View>
+    <View className="flex-1 bg-white">
       <Text>Ini Homes</Text>
+      <BottomNavigationComponent />
     </View>
   );
 };
