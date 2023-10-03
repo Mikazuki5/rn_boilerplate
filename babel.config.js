@@ -20,6 +20,7 @@ const plugins = [
     },
   ],
   ['nativewind/babel'],
+  ['react-native-reanimated/plugin'],
 ];
 
 module.exports = {

@@ -1,8 +1,14 @@
 import React from 'react';
 import { IconInterfaceProps } from 'interface/IconInterface';
 import { SvgProps } from 'react-native-svg';
-import { IconType } from 'types/Icon';
-import { HomeIcon, NewsPaperClipping } from 'assets/icons';
+import {
+  DangerIcon,
+  HomeIcon,
+  InfoIcon,
+  NewsPaperClipping,
+  SuccessIcon,
+  WarningIcon,
+} from 'assets/icons';
 
 export const Icon = ({
   name,
@@ -15,9 +21,13 @@ export const Icon = ({
     width: size || '18px',
   };
 
-  const IconNames: Record<IconType, JSX.Element> = {
+  const IconNames: Record<any, JSX.Element> = {
     home: <HomeIcon {...svgIconProps} />,
     newPaperClip: <NewsPaperClipping {...svgIconProps} />,
+    info: <InfoIcon {...svgIconProps} />,
+    danger: <DangerIcon {...svgIconProps} />,
+    warning: <WarningIcon {...svgIconProps} />,
+    success: <SuccessIcon {...svgIconProps} />,
   };
 
   return IconNames[name];

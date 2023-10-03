@@ -1,7 +1,5 @@
-import { IconType } from 'types/Icon';
-
 export interface IconInterfaceProps {
-  name: IconType;
+  name: string;
   size?: string;
   color?: string;
 }

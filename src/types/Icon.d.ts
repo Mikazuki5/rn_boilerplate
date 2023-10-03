@@ -1,1 +1,7 @@
-export type IconType = 'home' | 'newPaperClip';
+export type IconType =
+  | 'home'
+  | 'newPaperClip'
+  | 'info'
+  | 'danger'
+  | 'warning'
+  | 'success';
