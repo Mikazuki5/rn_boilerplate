@@ -2,7 +2,7 @@ import React from 'react';
 import { IconInterfaceProps } from 'interface/IconInterface';
 import { SvgProps } from 'react-native-svg';
 import { IconType } from 'types/Icon';
-import { HomeIcon } from 'assets/icons';
+import { HomeIcon, NewsPaperClipping } from 'assets/icons';
 
 export const Icon = ({
   name,
@@ -17,6 +17,7 @@ export const Icon = ({
 
   const IconNames: Record<IconType, JSX.Element> = {
     home: <HomeIcon {...svgIconProps} />,
+    newPaperClip: <NewsPaperClipping {...svgIconProps} />,
   };
 
   return IconNames[name];
