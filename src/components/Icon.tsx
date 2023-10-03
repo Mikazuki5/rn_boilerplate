@@ -2,6 +2,7 @@ import React from 'react';
 import { IconInterfaceProps } from 'interface/IconInterface';
 import { SvgProps } from 'react-native-svg';
 import {
+  CloseIcon,
   DangerIcon,
   HomeIcon,
   InfoIcon,
@@ -28,6 +29,7 @@ export const Icon = ({
     danger: <DangerIcon {...svgIconProps} />,
     warning: <WarningIcon {...svgIconProps} />,
     success: <SuccessIcon {...svgIconProps} />,
+    close: <CloseIcon {...svgIconProps} />,
   };
 
   return IconNames[name];
