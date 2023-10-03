@@ -15,10 +15,12 @@ const plugins = [
         '@services': './src/services',
         '@utils': './src/utils',
         '@types': './src/types',
+        '@interface': './src/interface',
       },
     },
   ],
   ['nativewind/babel'],
+  ['react-native-reanimated/plugin'],
 ];
 
 module.exports = {

@@ -1,5 +1,17 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
+# Rename Aplication after clone from repositori
+```bash
+#for rename package aplications
+npx react-native-rename@latest "YOUR_NEW_PACKAGE_NAME"
+
+#With custom Bundle Identifier
+npx react-native-rename@latest "YOUR_NEW_PACKAGE_NAME" -b "YOUR_NEW_BUNDLE_IDENTIFIER_NAME"
+```
+
+# Notes
+Please change configuration for your app like in Axios and RNConfig file
+
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.

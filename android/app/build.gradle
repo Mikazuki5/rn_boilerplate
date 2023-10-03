@@ -1,5 +1,6 @@
 apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 
 /**
  * This is the configuration block to customize your React Native Android app.
@@ -88,6 +89,21 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            if (rootProject.file("app/release.keystore").exists()) {
+                storeFile rootProject.file("app/release.keystore")
+                storePassword project.env.get("ANDROID_RELEASE_STORE_PASSWORD")
+                keyAlias project.env.get("ANDROID_RELEASE_ALIAS")
+                keyPassword project.env.get("ANDROID_RELEASE_KEY_PASSWORD")
+            } else {
+                println '-------------------------------------------------'
+                println 'THIS WARNING FOR LOCAL BUILD'
+                println 'Please define your configuration at gradle.properties'
+                println 'The release.keystore file was not found!'
+                println 'This release will not be signed by gradle!'
+                println '-------------------------------------------------'
+            }
+        }
     }
     buildTypes {
         debug {
@@ -104,6 +120,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-config')
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
 
