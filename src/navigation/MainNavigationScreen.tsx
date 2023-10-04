@@ -11,7 +11,7 @@ import {
   TransitionSpecs,
   createStackNavigator,
 } from '@react-navigation/stack';
-import { HomeScreenContainer } from 'screen';
+import { HomeScreenContainer, ProfileScreenContainer } from 'screen';
 
 const Stack = createStackNavigator<TMainNavigationScreen>();
 const navigationRef = createNavigationContainerRef<TMainNavigationScreen>();
@@ -59,6 +59,7 @@ const MainNavigationScreen = () => {
           ...SlideTransition,
         }}>
         <Stack.Screen name="Home" component={HomeScreenContainer} />
+        <Stack.Screen name="Profile" component={ProfileScreenContainer} />
       </Stack.Navigator>
     </NavigationContainer>
   );

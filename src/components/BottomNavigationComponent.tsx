@@ -4,6 +4,11 @@ import { TouchableOpacity, View } from 'react-native';
 import { Icon } from './Icon';
 import LinearGradient from 'react-native-linear-gradient';
 import { CircleButtonWithNavigationsCenterInterface } from 'interface/BottomNavigationInterface';
+import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { TMainNavigationScreen } from 'types/Navigation';
+
+type NavigationsProps = StackNavigationProp<TMainNavigationScreen>;
 
 const CircleButtonWithNavigationsCenter = ({
   start,
@@ -30,6 +35,7 @@ const CircleButtonWithNavigationsCenter = ({
 };
 
 const BottomNavigationComponent = () => {
+  const navigation = useNavigation<NavigationsProps>();
   return (
     <View
       className="absolute bottom-10 ml-4 mr-4 bg-white w-[90%] h-[8%] pl-4 pr-4 justify-between rounded-2xl shadow-neutral-400 shadow-[0px_9px_30px] flex-row self-center items-center content-centers"
@@ -37,7 +43,9 @@ const BottomNavigationComponent = () => {
       <TouchableOpacity className="items-center">
         <Icon name="home" size="35px" />
       </TouchableOpacity>
-      <TouchableOpacity className="items-center">
+      <TouchableOpacity
+        className="items-center"
+        onPress={() => navigation.navigate('Profile')}>
         <Icon name="home" size="35px" />
       </TouchableOpacity>
       {CircleButtonWithNavigationsCenter({ colors: ['#FF7C00', '#FFCB49'] })}
