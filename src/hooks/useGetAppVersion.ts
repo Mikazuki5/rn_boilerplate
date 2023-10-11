@@ -1,5 +1,5 @@
 import { useQuery, UseQueryOptions } from '@tanstack/react-query';
-import { APIError, APIResponse } from '@interfaces/BaseAPIResponse';
+import { APIError, APIResponse } from 'interface/IResponseAPI';
 import { Platform } from 'react-native';
 import { AxiosAuthInstance } from 'services/AxiosInstance';
 

@@ -4,4 +4,12 @@ export type IconType =
   | 'info'
   | 'danger'
   | 'warning'
-  | 'success';
+  | 'success'
+  | 'close'
+  | 'closeRounded'
+  | 'logout';
+
+type IconImageType = {
+  name: string;
+  iconStyles?: string;
+};

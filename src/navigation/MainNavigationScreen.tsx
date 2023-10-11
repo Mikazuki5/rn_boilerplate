@@ -50,18 +50,20 @@ const SlideTransition: StackNavigationOptions = {
 
 const MainNavigationScreen = () => {
   return (
-    <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator
-        initialRouteName="Home"
-        screenOptions={{
-          headerShown: false,
-          cardOverlayEnabled: true,
-          ...SlideTransition,
-        }}>
-        <Stack.Screen name="Home" component={HomeScreenContainer} />
-        <Stack.Screen name="Profile" component={ProfileScreenContainer} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <>
+      <NavigationContainer ref={navigationRef}>
+        <Stack.Navigator
+          initialRouteName="Home"
+          screenOptions={{
+            headerShown: false,
+            cardOverlayEnabled: true,
+            ...SlideTransition,
+          }}>
+          <Stack.Screen name="Home" component={HomeScreenContainer} />
+          <Stack.Screen name="Profile" component={ProfileScreenContainer} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>
   );
 };
 

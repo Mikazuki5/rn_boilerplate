@@ -5,3 +5,4 @@ export { default as SuccessIcon } from './Success.svg';
 export { default as DangerIcon } from './Danger.svg';
 export { default as WarningIcon } from './Warning.svg';
 export { default as CloseIcon } from './Cross.svg';
+export { default as CloseButtonWithRound } from './ClosedBtnRound.svg';
