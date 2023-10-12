@@ -62,7 +62,6 @@ const HomeScreenContainer = () => {
         isBtnClosed
         isBtnSubmit
         isBtnCancel
-        isSingleActionBtn
         onBtnSubmit={() => Alert.alert('Modal Active')}
       />
       <ModalBottomSheetComponent ref={modalBottomSheetRef} />

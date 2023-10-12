@@ -3,7 +3,7 @@ import { Button } from 'components';
 import { Icon, IconImage } from 'components/Icon';
 import React, { forwardRef, useImperativeHandle, useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import Animated from 'react-native-reanimated';
+import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
 import { twJoin } from 'tailwind-merge';
 import { ModalInteface, ModalTypeRef } from 'types/modal';
 
@@ -13,7 +13,6 @@ const ModalMessageBox = forwardRef(
       isImage,
       title,
       message,
-      isSingleActionBtn,
       isBtnClosed,
       isBtnSubmit,
       isBtnCancel,
@@ -33,7 +32,10 @@ const ModalMessageBox = forwardRef(
 
     return isVisible ? (
       <>
-        <Animated.View className="absolute bg-transparent w-full h-screen justify-center items-center">
+        <Animated.View
+          className="absolute bg-transparent w-full h-screen justify-center items-center"
+          entering={FadeIn}
+          exiting={FadeOut}>
           <View
             style={[
               StyleSheet.absoluteFillObject,
@@ -69,13 +71,14 @@ const ModalMessageBox = forwardRef(
             <View
               className={twJoin(
                 'mt-6 justify-between',
-                isSingleActionBtn && 'flex flex-row ',
+                isBtnSubmit && isBtnCancel && 'flex flex-row ',
               )}>
               {isBtnCancel ? (
                 <Button
+                  label="Kembali"
                   buttonStyles={twJoin(
                     'bg-transparent border-[0px]',
-                    isSingleActionBtn && 'w-[150px]',
+                    isBtnSubmit && 'w-[150px]',
                   )}
                   type="regular"
                   onPress={() => setIsVisible(false)}
@@ -84,7 +87,8 @@ const ModalMessageBox = forwardRef(
               ) : null}
               {isBtnSubmit ? (
                 <Button
-                  buttonStyles={twJoin(isSingleActionBtn && 'w-[150px]')}
+                  label="Submit"
+                  buttonStyles={twJoin(isBtnCancel && 'w-[150px]')}
                   type="regular"
                   onPress={() => onBtnSubmit()}
                 />

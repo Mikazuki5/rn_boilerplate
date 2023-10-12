@@ -28,14 +28,14 @@ const ButtonRegular = ({
 const ButtonComponent = ({
   buttonStyles,
   type,
-  btn_title,
+  label,
   textStyled,
   onPress,
 }: Button) => {
   const ButtonMapping: Record<BTN_TYPE, JSX.Element> = {
     regular: (
       <ButtonRegular
-        title={btn_title ?? 'Button CTA'}
+        title={label ?? 'Button CTA'}
         textStyled={textStyled}
         buttonStyles={buttonStyles}
         onPress={onPress}
