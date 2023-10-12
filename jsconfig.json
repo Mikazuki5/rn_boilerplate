@@ -1,16 +1,16 @@
 {
-    "compilerOptions": {
-      "baseUrl": ".",
-      "paths": {
-        "src/*": ["./src/*"],
-        "assets/*": ["./src/assets/*"],
-        "components/*": ["./src/components/*"],
-        "constants/*": ["./src/constants/*"],
-        "navigation/*": ["./src/navigation/*"],
-        "screen/*": ["./src/screen/*"],
-        "utils/*": ["./src/utils/*"],
-        "types/*": ["./src/types/*"],
-        "@interface/*": ["./src/interface/*"]
-      }
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["./src/*"],
+      "assets/*": ["./src/assets/*"],
+      "components/*": ["./src/components/*"],
+      "constants/*": ["./src/constants/*"],
+      "navigation/*": ["./src/navigation/*"],
+      "screen/*": ["./src/screen/*"],
+      "utils/*": ["./src/utils/*"],
+      "types/*": ["./src/types/*"],
+      "@interface/*": ["./src/interface/*"]
     }
   }
+}

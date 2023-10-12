@@ -24,7 +24,7 @@
       "@screen/*": ["src/screen/*"],
       "@services/*": ["src/services/*"],
       "@utils/*": ["src/utils/*"],
-      "@types/*": ["src/types/*"],
+      "@types/*": ["src/types/*"]
     }
   },
   "exclude": [

@@ -13,7 +13,10 @@
     "check:lint": "eslint --ignore-path .gitignore . --ext .js,.jsx,.ts,.tsx",
     "check:prettier": "prettier --config .prettierrc . --check",
     "check:ts": "tsc",
-    "checker": "yarn check:ts && yarn check:lint && yarn check:prettier && yarn test:coverage --onlyChanged --watchAll=false || exit 0"
+    "checker": "yarn check:ts && yarn check:lint && yarn check:prettier && yarn test:coverage --onlyChanged --watchAll=false || exit 0",
+    "format:lint": "eslint --fix . --ext .js,.jsx,.ts,.tsx",
+    "format:prettier": "prettier --config .prettierrc . --write",
+    "formatter": "yarn format:lint && yarn format:prettier"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.19.2",
