@@ -2,6 +2,7 @@ import React from 'react';
 import { IconInterfaceProps } from 'interface/IconInterface';
 import { SvgProps } from 'react-native-svg';
 import {
+  ArrowLeft,
   CloseButtonWithRound,
   CloseIcon,
   DangerIcon,
@@ -25,6 +26,7 @@ export const Icon = ({
     fill: color || '#000',
     height: size || '18px',
     width: size || '18px',
+    color: '#ffff',
   };
 
   const IconNames: Record<IconType, JSX.Element> = {
@@ -37,6 +39,7 @@ export const Icon = ({
     close: <CloseIcon {...svgIconProps} />,
     logout: <Logout {...svgIconProps} />,
     closeRounded: <CloseButtonWithRound {...svgIconProps} />,
+    arrowLeft: <ArrowLeft {...svgIconProps} />,
   };
 
   return IconNames[name];

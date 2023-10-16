@@ -1,7 +1,8 @@
 /* eslint-disable react-native/no-inline-styles */
 import { Button } from 'components';
 import { Icon, IconImage } from 'components/Icon';
-import React, { forwardRef, useImperativeHandle, useState } from 'react';
+import { useModalMessageBox } from 'hooks/useModalMessageBox';
+import React, { forwardRef } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
 import { twJoin } from 'tailwind-merge';
@@ -20,15 +21,7 @@ const ModalMessageBox = forwardRef(
     }: ModalInteface,
     ref: React.Ref<ModalTypeRef>,
   ) => {
-    const [isVisible, setIsVisible] = useState<boolean>(false);
-
-    const showModal = () => {
-      setIsVisible(true);
-    };
-
-    useImperativeHandle(ref, () => ({
-      show: showModal,
-    }));
+    const { isVisible, setIsVisible } = useModalMessageBox({ ref });
 
     return isVisible ? (
       <>

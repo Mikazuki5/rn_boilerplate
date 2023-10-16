@@ -7,6 +7,7 @@ export type IconType =
   | 'success'
   | 'close'
   | 'closeRounded'
+  | 'arrowLeft'
   | 'logout';
 
 type IconImageType = {

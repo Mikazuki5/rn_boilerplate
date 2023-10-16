@@ -34,7 +34,16 @@ const HomeScreenContainer = () => {
 
   return (
     <>
-      <Container className="ml-4 mr-16">
+      <Container
+        contentStyles="px-4"
+        isShowHeader
+        headerTitle="Home Screen"
+        leftComponent
+        rightComponent={
+          <TouchableOpacity>
+            <Text>Icon2</Text>
+          </TouchableOpacity>
+        }>
         <Text className="text-black">Ini Home</Text>
         <TouchableOpacity onPress={() => handleShowToast()}>
           <Text className="text-black">Ini Button</Text>
