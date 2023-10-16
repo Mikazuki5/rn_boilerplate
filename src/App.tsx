@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import 'react-native-gesture-handler';
 import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -10,8 +11,8 @@ const queryClient = new QueryClient();
 const app = () => {
   return (
     <>
-      <StatusBar barStyle={'dark-content'} backgroundColor={'#F4F5F6'} />
-      <SafeAreaProvider>
+      <SafeAreaProvider style={{ flex: 1 }}>
+        <StatusBar barStyle={'dark-content'} backgroundColor={'#F4F5F6'} />
         <QueryClientProvider client={queryClient}>
           <MainNavigationScreen />
         </QueryClientProvider>

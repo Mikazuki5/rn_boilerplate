@@ -2,8 +2,9 @@
 import { ToastComponentInterface } from 'interface/ToastComponentInterface';
 import Animated, { FadeInUp, FadeOutUp } from 'react-native-reanimated';
 import React, { forwardRef, useImperativeHandle, useState } from 'react';
-import { Text, View } from 'react-native';
+import { Platform, Text, View } from 'react-native';
 import { Icon } from './Icon';
+import { twJoin } from 'tailwind-merge';
 
 const ToastComponent = forwardRef(
   (
@@ -32,7 +33,10 @@ const ToastComponent = forwardRef(
       <>
         {isToastVisible ? (
           <Animated.View
-            className="absolute top-[20px] w-[90%] min-h-[46px] p-3 flex-row bg-white rounded-2xl shadow-neutral-400 shadow-[0px_9px_30px] ml-4 mr-4"
+            className={twJoin(
+              'absolute w-[90%] min-h-[46px] p-3 flex-row bg-white rounded-2xl shadow-neutral-400 shadow-[0px_9px_30px] ml-4 mr-4',
+              Platform.OS === 'ios' ? 'top-[50px]' : 'top-[20px]',
+            )}
             style={{ elevation: 5 }}
             entering={FadeInUp.delay(200)}
             exiting={FadeOutUp}>

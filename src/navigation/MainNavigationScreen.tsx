@@ -11,7 +11,7 @@ import {
   TransitionSpecs,
   createStackNavigator,
 } from '@react-navigation/stack';
-import { HomeScreenContainer } from 'screen';
+import { HomeScreenContainer, ProfileScreenContainer } from 'screen';
 
 const Stack = createStackNavigator<TMainNavigationScreen>();
 const navigationRef = createNavigationContainerRef<TMainNavigationScreen>();
@@ -50,17 +50,20 @@ const SlideTransition: StackNavigationOptions = {
 
 const MainNavigationScreen = () => {
   return (
-    <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator
-        initialRouteName="Home"
-        screenOptions={{
-          headerShown: false,
-          cardOverlayEnabled: true,
-          ...SlideTransition,
-        }}>
-        <Stack.Screen name="Home" component={HomeScreenContainer} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <>
+      <NavigationContainer ref={navigationRef}>
+        <Stack.Navigator
+          initialRouteName="Home"
+          screenOptions={{
+            headerShown: false,
+            cardOverlayEnabled: true,
+            ...SlideTransition,
+          }}>
+          <Stack.Screen name="Home" component={HomeScreenContainer} />
+          <Stack.Screen name="Profile" component={ProfileScreenContainer} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>
   );
 };
 

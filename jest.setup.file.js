@@ -1,6 +1,4 @@
 /* eslint-disable no-undef */
-import mockRNCNetInfo from '@react-native-community/netinfo/jest/netinfo-mock.js';
-import mock from 'react-native-permissions/mock';
 
 // jest.mock('react-native-permissions', () => {
 //   return mock;

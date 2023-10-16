@@ -1,7 +1,7 @@
-import { TOAST_TYPE } from 'types/Toast';
+import { IconType } from 'types/Icon';
 
 export interface ToastComponentInterface {
-  type: TOAST_TYPE | string;
+  type: IconType;
   text: string;
   description: string;
   timeout: number;
